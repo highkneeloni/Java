@@ -1,0 +1,29 @@
+import java.util.*;
+public class FriendNames {
+public static void main(String[] args) {
+// Scanner to read user input
+Scanner scanner = new Scanner(System.in);
+// Ask the user how many names they want to enter
+System.out.print("Enter the number of friends: ");
+int N = scanner.nextInt();
+scanner.nextLine(); // To consume the newline character left by nextInt()
+// Create a HashSet to store the names (HashSet removes duplicates)
+Set<String> friendsSet = new HashSet<>();
+// Loop to read N names from the user
+System.out.println("Enter the names of your friends:");
+for (int i = 0; i < N; i++) {
+String name = scanner.nextLine();
+friendsSet.add(name); // Add name to the HashSet
+}
+// Convert the HashSet to a List and sort it in ascending order
+List<String> sortedList = new ArrayList<>(friendsSet);
+Collections.sort(sortedList);
+// Display the names in ascending order
+System.out.println("\nFriends' names in ascending order:");
+for (String name : sortedList) {
+System.out.println(name);
+}
+// Close the scanner
+scanner.close();
+}
+}
