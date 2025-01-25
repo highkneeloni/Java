@@ -1,0 +1,33 @@
+import java.util.*;
+public class SortedUniqueIntegers {
+public static void main(String[] args) {
+// Create a TreeSet to store integers (automatically sorted and no duplicates)
+Set<Integer> numberSet = new TreeSet<>();
+// Scanner to read user input
+Scanner scanner = new Scanner(System.in);
+// Accept 'n' integers from the user
+System.out.print("Enter the number of integers you want to input: ");
+int n = scanner.nextInt();
+// Input n integers and store them in the TreeSet
+System.out.println("Enter the integers:");
+for (int i = 0; i < n; i++) {
+int num = scanner.nextInt();
+numberSet.add(num); // TreeSet automatically handles duplicates
+}
+// Display the integers in sorted order
+System.out.println("\nSorted integers without duplicates:");
+for (Integer number : numberSet) {
+System.out.println(number);
+}
+// Search for a particular element
+System.out.print("\nEnter the integer to search for: ");
+int searchNum = scanner.nextInt();
+if (numberSet.contains(searchNum)) {
+System.out.println(searchNum + " is present in the collection.");
+} else {
+System.out.println(searchNum + " is not present in the collection.");
+}
+// Close the scanner
+scanner.close();
+}
+}
