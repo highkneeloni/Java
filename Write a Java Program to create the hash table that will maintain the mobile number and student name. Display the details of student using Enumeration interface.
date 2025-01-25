@@ -1,0 +1,24 @@
+import java.util.*;
+public class StudentMobileDetails {
+public static void main(String[] args) {
+// Create a Hashtable to store student names and mobile numbers
+Hashtable<String, String> studentTable = new Hashtable<>();
+// Adding student names and mobile numbers
+studentTable.put("Alice", "9876543210");
+studentTable.put("Bob", "9123456789");
+studentTable.put("Charlie", "9345678901");
+studentTable.put("David", "9054321098");
+// Display student details using Enumeration interface
+System.out.println("Student Details (Name - Mobile Number):");
+// Get the enumeration for keys (names)
+Enumeration<String> names = studentTable.keys();
+// Get the enumeration for values (mobile numbers)
+Enumeration<String> numbers = studentTable.elements();
+// Print the details by iterating over both the name and mobile number using Enumeration
+while (names.hasMoreElements()) {
+String name = names.nextElement();
+String number = numbers.nextElement();
+System.out.println(name + " - " + number);
+}
+}
+}
