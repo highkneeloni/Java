@@ -1,0 +1,33 @@
+import java.util.*;
+public class NegativeIntegersLinkedList {
+public static void main(String[] args) {
+// Create a LinkedList to store integers
+LinkedList<Integer> integerList = new LinkedList<>();
+// Scanner to read user input
+Scanner scanner = new Scanner(System.in);
+// Accept 'N' integers from the user
+System.out.print("Enter the number of integers you want to input: ");
+int n = scanner.nextInt();
+// Input 'N' integers and store them in the LinkedList
+System.out.println("Enter the integers:");
+for (int i = 0; i < n; i++) {
+int num = scanner.nextInt();
+integerList.add(num); // Add the integer to the LinkedList
+}
+// Display only negative integers
+System.out.println("\nNegative integers are:");
+boolean foundNegative = false;
+for (Integer number : integerList) {
+if (number < 0) {
+System.out.println(number);
+foundNegative = true;
+}
+}
+// If no negative integers are found
+if (!foundNegative) {
+System.out.println("No negative integers found.");
+}
+// Close the scanner
+scanner.close();
+}
+}
