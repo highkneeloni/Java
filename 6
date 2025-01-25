@@ -1,0 +1,26 @@
+import java.util.*;
+public class LinkedListExample {
+public static void main(String[] args) {
+// Create a LinkedList of String objects
+LinkedList<String> list = new LinkedList<>();
+// Step 1: Add elements at the end of the list
+list.add("Alice");
+list.add("Bob");
+list.add("Charlie");
+list.add("David");
+System.out.println("List after adding elements at the end: " + list);
+// Step 2: Delete the first element of the list
+if (!list.isEmpty()) {
+list.removeFirst(); // Removes the first element
+System.out.println("List after deleting the first element: " + list);
+} else {
+System.out.println("List is empty, cannot remove first element.");
+}
+// Step 3: Display the contents of the list in reverse order
+System.out.println("List in reverse order:");
+Iterator<String> iterator = list.descendingIterator(); // Iterator for reverse order
+while (iterator.hasNext()) {
+System.out.println(iterator.next());
+}
+}
+}
