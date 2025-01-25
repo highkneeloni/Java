@@ -1,0 +1,29 @@
+*/
+import java.util.*;
+public class SubjectNamesLinkedList {
+public static void main(String[] args) {
+// Create a LinkedList to store subject names
+LinkedList<String> subjectList = new LinkedList<>();
+// Scanner to read user input
+Scanner scanner = new Scanner(System.in);
+// Accept 'N' subject names from the user
+System.out.print("Enter the number of subjects you want to input: ");
+int n = scanner.nextInt();
+scanner.nextLine(); // Consume the newline character after integer input
+// Input 'N' subject names and store them in the LinkedList
+System.out.println("Enter the subject names:");
+for (int i = 0; i < n; i++) {
+String subject = scanner.nextLine();
+subjectList.add(subject); // Add the subject name to the LinkedList
+}
+// Create an Iterator to traverse through the LinkedList
+Iterator<String> iterator = subjectList.iterator();
+// Display the subject names using the Iterator interface
+System.out.println("\nSubjects in the list:");
+while (iterator.hasNext()) {
+System.out.println(iterator.next());
+}
+// Close the scanner
+scanner.close();
+}
+}
